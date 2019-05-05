@@ -1,0 +1,32 @@
+body {
+    padding-top: 5rem;
+}
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+h1{
+    color:#0000FF;
+}
+
+h2{
+    color:#FF0000;
+}
+
+.log{
+    align-self: center;
+    flex-basis: 12em;
+    max-height: 2.25em;
+    font-size: 1.5em;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 0.5em 1em 0.5em 0.5em;
+}
+
+.navbar.is-fixed-bottom, .navbar.is-fixed-top {
+    left: 0px;
+    position: fixed;
+    right: 0px;
+    z-index: 30;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Simpe Flight Search</title>
+
+    <link rel="stylesheet" th:href="@{/css/ui.grid.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/fonts/ui-grid.woff}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    <link rel="stylesheet" type='text/css' th:href="@{/css/bootstrap.min.css}"/>
+
+    <script type="application/javascript" src="/../js/lib/angular.min.js" th:src="@{/js/lib/angular.min.js}"></script>
+    <script type="application/javascript" src="/../js/lib/ui-bootstrap.min.js" th:src="@{/js/lib/ui-bootstrap.min.js}"></script>
+    <script type="application/javascript" src="/../js/lib/ui-bootstrap-tpls.min.js" th:src="@{/js/lib/ui-bootstrap-tpls.min.js}"></script>
+    <script type="application/javascript" src="/../js/lib/ui-grid.min.js" th:src="@{/js/lib/ui-grid.min.js}"></script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="MainController">
+
+<div  id="navigation" class="navbar navbar-dark bg-dark fixed-top" applications-initialized="true">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="#/" class="navbar-item logo is-active">
+                <span>Simple Flight Search</span>
+            </a>
+            <div class="navbar-burger burger"><span></span><span></span><span></span></div>
+        </div>
+        <div class="navbar-menu">
+
+        </div>
+    </div>
+</div>
+<div class="container-fluid col-md-12">
+    <span class="form-control alert-danger" ng-show="hasErr">{{errorMsg}}</span>
+    <div class="form-group col-md-12">
+        <label>Date</label>
+        <input type="date" class="form-control col-md-3" ng-required="true" ng-model="flightDate" />
+    </div>
+
+    <div class="col-md-12">
+
+
+        <div class="form-inline">
+            <div class="form-group col-md-3">
+                <label>Flight Number</label>
+                <input placeholder="Flight Number"  class="form-control" type="text"  ng-model="flightNumber" />
+            </div>
+
+            <div class="form-group col-md-3">
+                <label>Origin</label>
+                <input placeholder="Origin"  class="form-control" type="text"  ng-model="origin" />
+            </div>
+            <div class="form-group col-md-3">
+                <label>Destination</label>
+                <input placeholder="Destination"  class="form-control" type="text"  ng-model="destination" />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <button class="btn btn-primary" ng-click="searchFlight()">Search</button>
+    </div>
+
+</div>
+
+<div  ui-grid="txnGrid" ></div>
+<!-- /.container -->
+
+<script type="application/javascript" src="/../js/app/app.js"  th:src="@{/js/app/app.js}"></script>
+
+
+</body>
+</html>
